@@ -1,0 +1,14 @@
+D:\2SEM\OOP\Labs\Lab2\Lab2\obj\Debug\Lab2.csprojAssemblyReference.cache
+D:\2SEM\OOP\Labs\Lab2\Lab2\obj\Debug\Lab2.Properties.Resources.resources
+D:\2SEM\OOP\Labs\Lab2\Lab2\obj\Debug\Lab2.csproj.GenerateResource.cache
+D:\2SEM\OOP\Labs\Lab2\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
+D:\2SEM\OOP\Labs\Lab2\Lab2\bin\Debug\Lab2.exe.config
+D:\2SEM\OOP\Labs\Lab2\Lab2\bin\Debug\Lab2.exe
+D:\2SEM\OOP\Labs\Lab2\Lab2\bin\Debug\Lab2.pdb
+D:\2SEM\OOP\Labs\Lab2\Lab2\obj\Debug\Lab2.exe
+D:\2SEM\OOP\Labs\Lab2\Lab2\obj\Debug\Lab2.pdb
+D:\2SEM\OOP\Labs\Lab2\Lab2\obj\Debug\Lab2.Form2.resources
+D:\2SEM\OOP\Labs\Lab2\Lab2\obj\Debug\Lab2.Form1.resources
+D:\2SEM\OOP\Labs\Lab2\Lab2\obj\Debug\Lab2.Form3.resources
+D:\2SEM\OOP\Labs\Lab2\Lab2\bin\Debug\System.ComponentModel.Annotations.dll
+D:\2SEM\OOP\Labs\Lab2\Lab2\obj\Debug\Lab2.csproj.CopyComplete
