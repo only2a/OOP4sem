@@ -1,0 +1,125 @@
+﻿<Window x:Class="_6_7_8.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_6_7_8"
+        mc:Ignorable="d"
+        MinHeight="510" MinWidth="920" 
+        Title="EditWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <ImageBrush x:Key="CloseBtnAddProd_MouseOver" ImageSource="D:\2SEM\OOP\Labs\Lab6-7_WPF\Lab6-7_WPF\Assest\no-40.png"/>
+        <Style x:Key="Close_btnAddProd" TargetType="{x:Type Button}">
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+                        <Border x:Name="button"
+                                BorderThickness="0"
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True"/>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+
+                                <Setter Property="Background"
+                                        TargetName="button"
+                                        Value="{StaticResource CloseBtnAddProd_MouseOver}"/>
+
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="Add" Visibility="Visible"      Background="Azure" >
+        <Label Content="{DynamicResource AddProdList}" HorizontalAlignment="Center" FontFamily="Lucida Calligraphy" FontSize="20" FontWeight="Bold" FontStyle="Italic" />
+        <TextBox x:Name="ProductName" HorizontalAlignment="Left" Height="25" Margin="29,56,0,0" TextWrapping="Wrap" Text="{DynamicResource NameProd}" VerticalAlignment="Top" Width="200"/>
+        <ComboBox x:Name="ProductType" HorizontalAlignment="Left" Margin="248,56,0,0" Text="Тип товара" VerticalAlignment="Top" Width="200" Height="25">
+            <ComboBoxItem Content="{DynamicResource laptop}" />
+            <ComboBoxItem Content="{DynamicResource phone}" />
+        </ComboBox>
+        <ListBox x:Name="ScreenSize" HorizontalAlignment="Left" Height="100" Margin="652,56,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.488,0.509">
+            <RadioButton Content="14,1&quot;"/>
+            <RadioButton Content="15,6&quot;"/>
+            <RadioButton Content="17,3&quot;"/>
+            <RadioButton Content="4,7&quot;"/>
+            <RadioButton Content="5,0&quot;"/>
+            <RadioButton Content="5,3&quot;"/>
+            <RadioButton Content="5,5&quot;"/>
+            <RadioButton Content="5,7&quot;"/>
+        </ListBox>
+        <ComboBox x:Name="ScreenType" HorizontalAlignment="Left" Margin="248,104,0,0" Text="Тип товара" VerticalAlignment="Top" Width="200" Height="25">
+            <ComboBoxItem Content="OLED" />
+            <ComboBoxItem Content="AMOLED" />
+            <ComboBoxItem Content="TFT" />
+            <ComboBoxItem Content="IPS" />
+            <ComboBoxItem Content="TN+Film" />
+        </ComboBox>
+        <ListBox x:Name="CPU" HorizontalAlignment="Left" Height="100" Margin="500,56,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.488,0.509">
+            <RadioButton Content="A15 Bionic"/>
+            <RadioButton Content="Dimensity 9000"/>
+            <RadioButton Content="Snapdragon 8 Gen 1"/>
+            <RadioButton Content="A14 Bionic"/>
+            <RadioButton Content="AMD Ryzen 9 5900HX"/>
+            <RadioButton Content="Intel Core i9-11980HK"/>
+            <RadioButton Content="Intel Core i9-11950H"/>
+            <RadioButton Content="AMD Ryzen 9 5980HS"/>
+        </ListBox>
+        <Label x:Name="sliderValue" Content="Label" HorizontalAlignment="Left" Margin="325,176,0,0" VerticalAlignment="Top" Height="34"/>
+        <Slider x:Name="sldr" HorizontalAlignment="Left" Margin="248,150,0,0" VerticalAlignment="Top" Height="26" Width="200" Minimum="1" Maximum="16" SmallChange="1" ValueChanged="sldr_ValueChanged" RenderTransformOrigin="0.492,0.646" />
+        <Button   BorderThickness="0"  Style="{StaticResource Close_btnAddProd}" HorizontalAlignment="Right" Margin="500,10,30,0" VerticalAlignment="Top" Width="40" Height="40" Click="Button_Click">
+            <Button.Background>
+
+                <ImageBrush ImageSource="D:\2SEM\OOP\Labs\Lab6-7_WPF\Lab6-7_WPF\Assest\x.png"/>
+
+            </Button.Background>
+        </Button>
+        <ComboBox x:Name="graphicsCard" HorizontalAlignment="Left" Margin="29,104,0,0" Text="Тип товара" VerticalAlignment="Top" Width="200" Height="25">
+            <ComboBoxItem Content="NVIDIA GeForce RTX 3090" />
+            <ComboBoxItem Content="AMD Radeon RX 6900 XT Liquid Cooled" />
+            <ComboBoxItem Content="AMD Radeon RX 480" />
+            <ComboBoxItem Content="NVIDIA GeForce GTX 1660 Ti" />
+            <ComboBoxItem Content="NVIDIA GeForce GTX 1650" />
+        </ComboBox>
+        <ListBox x:Name="storage" HorizontalAlignment="Left" Height="100" Margin="786,56,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.488,0.509">
+            <CheckBox Content="SSD 32 GB"/>
+            <CheckBox Content="SSD 64 GB"/>
+            <CheckBox Content="SSD 128 GB"/>
+            <CheckBox Content="SSD 256 GB"/>
+            <CheckBox Content="SSD 512 GB"/>
+            <CheckBox Content="HDD 1 TB"/>
+            <CheckBox Content="HDD 512 GB"/>
+        </ListBox>
+        <TextBox x:Name="NumberOfSIM" HorizontalAlignment="Left" Height="25" Margin="29,150,0,0" TextWrapping="Wrap" Text="{DynamicResource CountOfSim}" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="OS" HorizontalAlignment="Left" Height="25" Margin="30,187,0,0" TextWrapping="Wrap" Text="{DynamicResource OS}" VerticalAlignment="Top" Width="130" FontSize="11"/>
+        <TextBox x:Name="CamRes" HorizontalAlignment="Left" Height="25" Margin="30,224,0,0" TextWrapping="Wrap" Text="{DynamicResource Cam}" VerticalAlignment="Top" Width="130"/>
+        <Button x:Name="Add_btn" Content="{DynamicResource AddProd}" HorizontalAlignment="Left" Margin="410,417,0,0" VerticalAlignment="Top" Width="130" Height="35" Click="Add_btn_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="price" HorizontalAlignment="Left" Height="25" Margin="30,257,0,0" TextWrapping="Wrap" Text="{DynamicResource price}" VerticalAlignment="Top" Width="91"/>
+        <Button Content="{DynamicResource Picture}" HorizontalAlignment="Left" Margin="29,327,0,0" VerticalAlignment="Top" Width="114" Click="Button_Click_3" Height="42"/>
+        <TextBox x:Name="discription" HorizontalAlignment="Left" Height="145" Margin="220,224,0,0" TextWrapping="Wrap" Text="{DynamicResource discription}" VerticalAlignment="Top" Width="666"/>
+
+
+
+    </Grid>
+</Window>

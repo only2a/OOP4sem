@@ -1,0 +1,40 @@
+﻿<Window x:Class="Lab9_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab9_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:CustomCommands.Exit" CanExecute="ExitCommand_CanExecute" Executed="ExitCommand_Executed" />
+    </Window.CommandBindings>
+    <Grid>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Command="local:CustomCommands.Exit" />
+            </MenuItem>
+        </Menu>
+        <StackPanel>
+
+            <local:SpoilerControl Secret="This is a secret message"/>
+            <local:SpoilerControl>
+                <local:SpoilerControl.Secret>
+                    <Rectangle Fill="red" Height="50" Width="50"/>
+                </local:SpoilerControl.Secret>
+            </local:SpoilerControl>
+
+            <StackPanel Orientation="Horizontal">
+                <local:UserControl2 Width="240" ></local:UserControl2>
+                <Grid Width="Auto" Margin="180,0,0,0">
+                    <local:MynewButton x:Name="OuterButton" MyButtonClick="MynewButton_MyButtonClick" Width="120" Height="80">
+
+                        <StackPanel>
+                            <local:MynewButton x:Name="InnerButton" Padding="5" Width="80" MyButtonClick="MynewButton_MyButtonClick" Content="Вложенная"></local:MynewButton>
+                        </StackPanel>   
+                    </local:MynewButton>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

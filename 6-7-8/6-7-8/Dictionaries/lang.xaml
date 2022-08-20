@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:_6_7_8.Dictionaries" xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="Menu">M E N U</v:String>
+    <v:String x:Key="Home">Home</v:String>
+    <v:String x:Key="Catalog">Catalog</v:String>
+    <v:String x:Key="Basket">Basket</v:String>
+    <v:String x:Key="SignOut">Sign out</v:String>
+    <v:String x:Key="Settings">Settings</v:String>
+    <v:String x:Key="AddProd">Add product</v:String>
+    <v:String x:Key="ChangeLeng">Change language</v:String>
+    <v:String x:Key="AddProdList">Add product</v:String>
+    <v:String x:Key="NameProd">Product's Name</v:String>
+    <v:String x:Key="laptop">Laptop</v:String>
+    <v:String x:Key="phone">Smartphone</v:String>
+    <v:String x:Key="CountOfSim">SIM Count</v:String>
+    <v:String x:Key="OS">Operation system</v:String>
+    <v:String x:Key="Cam">Camera resolution</v:String>
+    <v:String x:Key="Picture">Picture</v:String>
+    <v:String x:Key="discription">Discription</v:String>
+    <v:String x:Key="price">Price</v:String>
+    <v:String x:Key="enter">Enter product name:</v:String>
+    <v:String x:Key="laptops">Laptop</v:String>
+    <v:String x:Key="phones">Smartphone</v:String>
+    <v:String x:Key="allProducts">All products</v:String>
+    <v:String x:Key="sort">Sort:</v:String>
+    <v:String x:Key="ram">RAM</v:String>
+    <v:String x:Key="scrSize">Screen size</v:String>
+    <v:String x:Key="authorization">Authorization</v:String>
+    <v:String x:Key="login">Login</v:String>
+    <v:String x:Key="siso">Sign in/ Sign up</v:String>
+    <v:String x:Key="delete_label">Delete</v:String>
+    <v:String x:Key="edit_label">Edit</v:String>
+    <v:String x:Key="buy">Buy</v:String>
+</ResourceDictionary>

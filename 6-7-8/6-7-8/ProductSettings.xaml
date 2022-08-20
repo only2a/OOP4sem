@@ -1,0 +1,58 @@
+﻿<Window x:Class="_6_7_8.ProductSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_6_7_8"
+        mc:Ignorable="d"
+        Title="ProductSettings" Height="450" Width="800" WindowStartupLocation="CenterOwner">
+
+    <Window.Resources>
+        <Style x:Key="dark_maincolor">
+            <Setter Property="Control.Background" Value="AntiqueWhite"></Setter>
+            <Setter Property="Control.Foreground" Value="White"></Setter>
+        </Style>
+        <Style x:Key="light_maincolor">
+            <Setter Property="Control.Background" Value="AntiqueWhite"></Setter>
+            <Setter Property="Control.Foreground" Value="White"></Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Style="{StaticResource dark_maincolor}">
+        <DockPanel LastChildFill="False">
+            <ScrollViewer DockPanel.Dock="Left" Width="650">
+                <ListBox x:Name="listBox" SelectionMode="Single" SelectionChanged="listBox_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border x:Name="listElement" BorderThickness="2">
+                                <StackPanel Margin="5">
+                                    <Image Width="100" Height="100" Source="{Binding Path=imgPath}"></Image>
+                                    <TextBlock FontSize="20" Text="{Binding Path=shortName}"></TextBlock>
+                                    <TextBlock FontSize="12" Text="{Binding Path=discription}"></TextBlock>
+                                    <TextBlock FontSize="14" FontWeight="Bold" Text="{Binding Path=price}">rub</TextBlock>
+                                    <TextBlock FontSize="12" FontStyle="Italic" Text="{Binding Path=typeOfProduct}"></TextBlock>
+
+
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+            <Grid x:Name="Instruments" DockPanel.Dock="Right" MinWidth="150" MaxWidth="200"  HorizontalAlignment="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+               
+                <Button x:Name="DeleteElementButton" Background="BurlyWood" Foreground="White" FontSize="25" Grid.Row="1" Margin="20" IsEnabled="False" Command="{Binding DeleteElementCommand}" CommandParameter="{Binding ElementName=listBox, Path=SelectedItem}" Content="{DynamicResource delete_label}"></Button>
+                <Button x:Name="EditElementButton" Background="BurlyWood" Foreground="White" FontSize="25" Grid.Row="2" Margin="20" IsEnabled="False" Command="{Binding EditElementCommand}" CommandParameter="{Binding ElementName=listBox, Path=SelectedItem}" Content="{DynamicResource edit_label}"></Button>
+                <StackPanel Grid.Row="3" Orientation="Horizontal">
+                   
+                </StackPanel>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

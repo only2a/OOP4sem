@@ -1,0 +1,52 @@
+﻿<Window x:Class="_6_7_8.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_6_7_8"
+        mc:Ignorable="d"
+        Title="Authorization" Height="400" WindowStyle="None" Width="800" WindowStartupLocation="CenterScreen" Background="Transparent" >
+
+    <Window.CommandBindings>
+
+        <CommandBinding Command="Open" Executed="WindowBinding_Opened" />
+    </Window.CommandBindings>
+
+
+
+    <Grid Background="Transparent">
+
+        <Border
+                BorderBrush="White"
+                Background="White"
+                CornerRadius="10,10,10,10"
+                BorderThickness="5"
+                >
+            <StackPanel Orientation="Horizontal"  Background="White"  Height="400" Width="800">
+
+
+
+                <StackPanel  Height="400" Width="400">
+                    <Label Content="Авторизация" HorizontalAlignment="Left" Margin="48,35,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Foreground="#FF2DB84C" Background="{x:Null}"/>
+                    <WrapPanel Height="25" Orientation="Horizontal" Margin="0,100,0,0">
+                        <Image HorizontalAlignment="Left" Height="25" Margin="50,0,0,0" VerticalAlignment="Top" Width="25" Source="D:\2SEM\OOP\kursach\MoneyFY - MM\MoneyFY - MM\Pictures\login_icon.png"/>
+                        <TextBox x:Name="login" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" TextWrapping="Wrap" Text="email" VerticalAlignment="Top" Width="180" SelectionBrush="#FF9F9F9F" BorderBrush="#FF2DB84C" Background="#FF00C72C" Foreground="White" FontWeight="Bold"/>
+                    </WrapPanel>
+                    <WrapPanel Height="25" Orientation="Horizontal" Margin="0,10,0,0">
+                        <Image HorizontalAlignment="Left" Height="28" Margin="50,0,0,0" VerticalAlignment="Top" Width="28" Source="D:\2SEM\OOP\kursach\MoneyFY - MM\MoneyFY - MM\Pictures\password_icon.png"/>
+                        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Width="183" Height="25" Background="#FF00C72C" Foreground="White" SelectionBrush="{x:Null}" BorderBrush="{x:Null}"/>
+                    </WrapPanel>
+                    <WrapPanel Height="25" Orientation="Horizontal" Margin="0,10,0,0">
+                        <Button Content="ВОЙТИ" HorizontalAlignment="Center" Command="ApplicationCommands.Open" Margin="55,0,0,0" VerticalAlignment="Top" Width="100" Height="25" Background="#FF2DB84C" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" />
+
+                    </WrapPanel>
+                </StackPanel>
+                <StackPanel Height="400" Width="400" Orientation="Vertical">
+                    <Image HorizontalAlignment="Left" Height="305" Margin="10,40,0,0" VerticalAlignment="Top" Width="353" Source="D:\2SEM\OOP\Labs\6-7-8\6-7-8\Pictures\logo.jpg" />
+                </StackPanel>
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+</Window>
